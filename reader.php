@@ -1,3 +1,6 @@
+<?php
+    require 'variables.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +73,7 @@
     // Load the opf
     var bookName = /book=([^&]+)/.exec(location)[1];
 
-    var book = ePub(<?php echo '"./books/"';?> + bookName);
+    var book = ePub(<?php echo '"'.$BOOKS_DIR.'/"';?> + bookName);
     var rendition = book.renderTo("viewer", { method: "continuous", width: "100%"});
     var displayed = rendition.display();
     displayed.then(function(renderer){

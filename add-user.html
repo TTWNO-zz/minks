@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form name="newuser" action="api.php", method="POST">
+            <p>Request Type:</p>
+            <br />
+            <select name="func">
+                <option value="nu">New User</option>
+                <option value="cws">Change word properties</option>
+            </select>
+            <br />
+            <p>Username:</p>
+            <br />
+            <input type="username" name="user" />
+            <br />
+            <b>
+                <p>Only for CWS:</p>
+                <br />
+                <p>Word:</p>
+                <input type="text" name="word" placeholder="考試" />
+                <br />
+                <p>Knowledge level</p>
+                <br />
+                <input type="text" name="kl" placeholder="1"/>
+                <br />
+                <input type="submit" />
+            </b>
+        </form>
+    </body>
+</html>
